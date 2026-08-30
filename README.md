@@ -8,6 +8,22 @@ Most meeting tools optimize for the document produced at the end of one meeting.
 
 [한국어 README](README_KO.md)
 
+## Why I built this
+
+Meeting notes are good at telling me **what happened in a meeting**. They are much worse at telling me **what I should remember the next time I meet the same person**.
+
+Across repeated conversations, the details that matter tend to scatter: what I told someone, what they asked me to do, what I promised, what they promised, what we agreed on, and what was left unresolved. Even when every meeting has a summary, that context is still easy to lose because it is organized by meeting rather than by relationship and continuity.
+
+I wanted a system that could answer a more practical set of questions before the next conversation:
+
+- What did I tell this person last time?
+- What did they tell or ask me?
+- What did either of us promise?
+- What is still unresolved or overdue?
+- What should I remember or verify when we meet again?
+
+That became the idea behind **Meeting Memory System**: keep the original meeting evidence, but build a persistent person-centered memory layer on top of it so each new conversation can start with the context of the previous ones.
+
 ## Why this exists
 
 A meeting summary is useful once. A memory system should still be useful months later.
