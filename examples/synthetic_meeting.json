@@ -1,0 +1,30 @@
+{
+  "people": [
+    {"person_id":"P-HOST","name":"Alex Kim","organization":"Example Labs","position":"Lead"},
+    {"person_id":"P-MINA","name":"Mina Lee","organization":"Example Manufacturing","position":"Engineer"},
+    {"person_id":"P-JO","name":"Jo Park","organization":"Example Manufacturing","position":"Quality Engineer"}
+  ],
+  "meeting": {
+    "meeting_id":"M-20260830-001",
+    "title":"Synthetic pilot readiness review",
+    "purpose":"Review the next validation run and unresolved evidence",
+    "meeting_type":"GENERAL_MEETING",
+    "started_at":"2026-08-30T09:00:00+09:00",
+    "ended_at":"2026-08-30T09:35:00+09:00",
+    "facilitator_person_id":"P-HOST"
+  },
+  "participant_ids":["P-HOST","P-MINA","P-JO"],
+  "utterances":[
+    {"utterance_id":"U-001","speaker_person_id":"P-MINA","start_time":"00:03:10","end_time":"00:03:22","text":"Please confirm the revised validation window before Wednesday.","addressee_person_ids":["P-HOST"]},
+    {"utterance_id":"U-002","speaker_person_id":"P-HOST","start_time":"00:04:05","end_time":"00:04:16","text":"I will confirm the revised validation window by Tuesday.","addressee_person_ids":["P-MINA"]},
+    {"utterance_id":"U-003","speaker_person_id":"P-JO","start_time":"00:11:40","end_time":"00:11:55","text":"The evidence pack is still missing the final measurement attachment.","addressee_person_ids":["P-HOST","P-MINA"]},
+    {"utterance_id":"U-004","speaker_person_id":"P-MINA","start_time":"00:28:10","end_time":"00:28:25","text":"I recently moved into the pilot process role, so I will own the next run.","addressee_person_ids":["P-HOST"]}
+  ],
+  "conversation_items":[
+    {"item_id":"I-001","item_type":"REQUEST","summary":"Mina asked Alex to confirm the revised validation window before Wednesday.","status":"OPEN","speaker_person_id":"P-MINA","owner_person_id":"P-HOST","target_person_id":"P-HOST","due_date":"2026-09-02","topic":"validation schedule","confidence":0.99,"review_status":"ACCEPTED","evidence_utterance_ids":["U-001"]},
+    {"item_id":"I-002","item_type":"PROMISE","summary":"Alex promised Mina to confirm the revised validation window by Tuesday.","status":"OPEN","speaker_person_id":"P-HOST","owner_person_id":"P-HOST","target_person_id":"P-MINA","due_date":"2026-09-01","topic":"validation schedule","confidence":0.99,"review_status":"ACCEPTED","evidence_utterance_ids":["U-002"]},
+    {"item_id":"I-003","item_type":"OPEN_ITEM","summary":"Final measurement attachment is missing from the evidence pack.","status":"OPEN","speaker_person_id":"P-JO","owner_person_id":"P-MINA","target_person_id":"P-MINA","topic":"validation evidence","confidence":0.98,"review_status":"ACCEPTED","evidence_utterance_ids":["U-003"]},
+    {"item_id":"I-004","item_type":"FACT","summary":"Mina said she recently moved into the pilot process role.","status":"DONE","speaker_person_id":"P-MINA","target_person_id":"P-HOST","topic":"role change","confidence":0.92,"review_status":"ACCEPTED","evidence_utterance_ids":["U-004"]},
+    {"item_id":"I-005","item_type":"INTEREST","summary":"Mina may prefer early-morning review sessions.","status":"DONE","speaker_person_id":"P-MINA","target_person_id":"P-HOST","topic":"meeting preference","confidence":0.55,"review_status":"NEEDS_REVIEW","evidence_utterance_ids":["U-004"]}
+  ]
+}
