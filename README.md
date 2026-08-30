@@ -10,19 +10,25 @@ Most meeting tools optimize for the document produced at the end of one meeting.
 
 ## Why I built this
 
-Meeting notes are good at telling me **what happened in a meeting**. They are much worse at telling me **what I should remember the next time I meet the same person**.
+This project started from a real conversation, not from a feature brainstorm.
 
-Across repeated conversations, the details that matter tend to scatter: what I told someone, what they asked me to do, what I promised, what they promised, what we agreed on, and what was left unresolved. Even when every meeting has a summary, that context is still easy to lose because it is organized by meeting rather than by relationship and continuity.
+I had been using AI heavily in my work, and during an informal discussion I asked a senior manager a simple question: **“If AI could help me build one useful program for you, what would you want?”**
 
-I wanted a system that could answer a more practical set of questions before the next conversation:
+His answer was not about dashboards or productivity automation. He said he meets a lot of people through frequent discussion sessions, and sometimes feels bad when he meets someone again but cannot remember the person well or recall the small things they talked about before.
+
+What he wanted was simple: before meeting someone again, he wanted to remember **who they were, what they had talked about, what mattered to them, and even a small detail he could bring up naturally in the next conversation**.
+
+That changed the problem completely. The goal was no longer to build another meeting summarizer. It was to build **continuity between human conversations**.
+
+Meeting notes are good at telling us what happened in one meeting. A person-centered memory system should help answer a different set of questions:
 
 - What did I tell this person last time?
 - What did they tell or ask me?
 - What did either of us promise?
 - What is still unresolved or overdue?
-- What should I remember or verify when we meet again?
+- What small detail might help the next conversation start naturally instead of from zero?
 
-That became the idea behind **Meeting Memory System**: keep the original meeting evidence, but build a persistent person-centered memory layer on top of it so each new conversation can start with the context of the previous ones.
+That became the idea behind **Meeting Memory System**: preserve the original meeting evidence, but build a persistent person-centered memory layer on top of it so each new conversation can start with the context of the previous ones.
 
 ## Why this exists
 
