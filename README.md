@@ -30,6 +30,18 @@ Meeting notes are good at telling us what happened in one meeting. A person-cent
 
 That became the idea behind **Meeting Memory System**: preserve the original meeting evidence, but build a persistent person-centered memory layer on top of it so each new conversation can start with the context of the previous ones.
 
+### One unfinished part of the story
+
+I asked that question with quite a bit of confidence: *tell me what program you need, and I will try to build it.*
+
+Then I got a real answer — and eventually ran into a very real engineering constraint.
+
+The original vision was larger than this public v0.1: local transcription, speaker separation, person-specific long-term memory, and automatic pre-meeting briefing as one end-to-end system. Before I finished that full local pipeline, **my available computer hardware became the bottleneck**.
+
+> **The idea survived. My hardware did not.**
+
+So the person who originally gave me this problem will have to wait a little longer. Sorry. 😅 The memory core is here; the full local version may need to wait for my next hardware upgrade.
+
 ## Why this exists
 
 A meeting summary is useful once. A memory system should still be useful months later.
