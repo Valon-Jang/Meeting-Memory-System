@@ -1,0 +1,28 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m unittest discover -s tests -v
+      - run: |
+          DB="$RUNNER_TEMP/meeting-memory.db"
+          python -m meeting_memory_system --db "$DB" ingest examples/synthetic_meeting.json --pretty
+          python -m meeting_memory_system --db "$DB" brief P-MINA --as-of 2026-09-03 --pretty
+      - run: python -m pip install --upgrade pip setuptools wheel
+      - run: python -m pip install -e . --no-build-isolation
+      - run: |
+          DB="$RUNNER_TEMP/meeting-memory-cli.db"
+          meeting-memory --db "$DB" ingest examples/synthetic_meeting.json --pretty
+          meeting-memory --db "$DB" person P-MINA --pretty
